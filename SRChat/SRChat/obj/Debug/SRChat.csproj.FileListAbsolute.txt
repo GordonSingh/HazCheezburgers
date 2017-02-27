@@ -45,3 +45,4 @@ C:\Users\arins\Desktop\HazCheezburgers\SRChat\SRChat\bin\roslyn\System.IO.FileSy
 C:\Users\arins\Desktop\HazCheezburgers\SRChat\SRChat\bin\roslyn\System.IO.FileSystem.Primitives.dll
 C:\Users\arins\Desktop\HazCheezburgers\SRChat\SRChat\bin\roslyn\vbc.exe.config
 C:\Users\arins\Desktop\HazCheezburgers\SRChat\SRChat\bin\roslyn\vbc.rsp
+C:\Users\arins\Desktop\HazCheezburgers\SRChat\SRChat\obj\Debug\SRChat.csprojResolveAssemblyReference.cache
