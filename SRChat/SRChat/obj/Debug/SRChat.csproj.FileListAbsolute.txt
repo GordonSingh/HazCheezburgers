@@ -29,7 +29,6 @@ C:\Users\arins\Desktop\HazCheezburgers\SRChat\SRChat\bin\Microsoft.Owin.xml
 C:\Users\arins\Desktop\HazCheezburgers\SRChat\SRChat\bin\Microsoft.Owin.Host.SystemWeb.xml
 C:\Users\arins\Desktop\HazCheezburgers\SRChat\SRChat\bin\Microsoft.Owin.Security.xml
 C:\Users\arins\Desktop\HazCheezburgers\SRChat\SRChat\bin\Newtonsoft.Json.xml
-C:\Users\arins\Desktop\HazCheezburgers\SRChat\SRChat\obj\Debug\SRChat.csprojResolveAssemblyReference.cache
 C:\Users\arins\Desktop\HazCheezburgers\SRChat\SRChat\obj\Debug\SRChat.dll
 C:\Users\arins\Desktop\HazCheezburgers\SRChat\SRChat\obj\Debug\SRChat.pdb
 C:\Users\arins\Desktop\HazCheezburgers\SRChat\SRChat\bin\roslyn\csc.exe.config
