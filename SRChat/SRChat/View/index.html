@@ -2,7 +2,6 @@
 <html>
 <head>
     <title>Signal R Chat</title>
-    <meta charset="utf-8" />
     <style type="text/css">
         .container {
             background-color: #d2b48c;
@@ -11,10 +10,10 @@
             margin: 20px;
         }
     </style>
-
 </head>
 <body>
     <div class="container">
+        <label id="userName"></label>
         <input type="text" id="message" />
         <input type="button" id="sendmessage" value="Send" />
         <input type="hidden" id="displayname" />
@@ -22,28 +21,34 @@
     </div>
 
     <script src="../Scripts/jquery-3.1.1.min.js"></script>
-    <script src="../Scripts/jquery.signalR-2.2.1.min.js"></script>
+    <script src="../Scripts/jquery.signalR-2.2.1.js"></script>
     <script src="http://localhost:23872/signalr/hubs"></script>
     <script type="text/javascript">
         $(function () {
+            //Declared proxy to reference the hub
             var chat = $.connection.chatHub;
-
+            //Create a function that the hub can call to broadcast messages.
             chat.client.broadcastMessage = function (name, message) {
-
+                //Html encoded display name and message.
                 var encodedName = $('<div />').text(name).html();
                 var encodedMsg = $('<div />').text(message).html();
-
-                $('"discussion').append('<li><strong>' + encodedName
+                //Add the message to the page
+                $('#discussion').append('<li><strong>' + encodedName
                     + '</strong:&bsp;&nbsp;' + encodedMsg + '<li>');
+                console.log(encodedMsg + " " + encodedName);
+                $('#userName').text(encodedName);
             };
+           
             $('#displayname').val(prompt('Enter your name:', ''));
+           
             $('#message').focus();
+
             $.connection.hub.start().done(function () {
-                    $('#sendmessage').click(function () {
-                        chat.server.SendMessage($('#displayname').val(), $('#message').val());
-                            $('#message').val('').focus();
-                        });
+                $('#sendmessage').click(function () {
+                    chat.server.send($('#displayname').val(), $('#message').val());
+                    $('#message').val('').focus();
                 });
+            });
         });
     </script>
 </body>
